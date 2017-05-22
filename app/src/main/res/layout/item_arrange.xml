@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="?listPreferredItemHeight"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:elevation="4dp">
+    <ImageView
+        android:id="@+id/iv_listview_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:paddingLeft="-7dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/tv_listview_songname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Song name"
+        android:textSize="16dp"
+        android:textColor="#ff2e2e2e"
+        android:background="@color/colorBackground3"
+        android:padding="1dp"
+        android:fontFamily="sans-serif-condensed"
+        android:maxLines="1"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/tv_listview_songartist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Artist name"
+        android:textSize="12dp"
+        android:textColor="#ff2e2e2e"
+        android:background="@color/colorBackground3"
+        android:padding="1dp"
+        android:fontFamily="sans-serif-condensed"
+        android:maxLines="1"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:padding="10dp"
+        android:src="@drawable/ic_reorder"
+        android:visibility="gone"
+        />
+</FrameLayout>

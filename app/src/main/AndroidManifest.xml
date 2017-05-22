@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.justakiss.stoberriibeautymusic">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:allowClearUserData="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name=".activity.LoadingScreen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.MainScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.CATEGORY_APP_MUSIC" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PlayScreen"/>
+        <activity android:name=".activity.AlbumDetailScreen"/>
+        <activity android:name=".activity.SingerDetailScreen"/>
+        <activity android:name=".activity.ArrangeScreen"/>
+        <service android:name=".handler.NotiClickHandler"
+            android:stopWithTask="false"/>
+        <service android:name=".handler.MusicService"
+            android:stopWithTask="false"/>
+    </application>
+</manifest>

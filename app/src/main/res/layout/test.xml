@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#645f5f"
+android:id="@+id/rl_play_screen">
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="350dp"-->
+<!--android:id="@+id/ll_circular_bg"-->
+<!--android:background="#ffa647"-->
+<!--android:padding="5dp">-->
+<!---->
+<!--</RelativeLayout>-->
+<RelativeLayout
+    android:id="@+id/rl_title"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#ffa647"
+    android:padding="5dp"
+    android:layout_alignTop="@id/rl_play_screen">
+    <TextView
+        android:id="@id/tv_name_nowplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Love Me Like You Do"
+        android:textSize="20dp"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@id/tv_artist_nowplaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eddie Goulding"
+        android:textSize="15dp"
+        android:fontFamily="monospace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp" />
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/rl_seekbar"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#81ff47"
+    android:padding="5dp"
+    android:layout_below="@id/rl_title">
+    <com.example.justakiss.stoberriibeautymusic.custom.CircularSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sb_circular">
+    </com.example.justakiss.stoberriibeautymusic.custom.CircularSeekBar>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:04"
+        android:textSize="55dp"
+        android:fontFamily="casual"
+        android:layout_marginTop="150dp"
+        android:layout_centerInParent="true" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_shuffle_on"
+        android:id="@id/btn_shuffle"
+        android:background="@android:color/transparent"
+        android:layout_alignBottom="@id/tv_time"
+        android:layout_alignLeft="@id/tv_time"
+        android:layout_marginBottom="-30dp" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_repeat_on"
+        android:id="@id/btn_repeat"
+        android:background="@android:color/transparent"
+        android:layout_alignBottom="@id/tv_time"
+        android:layout_marginBottom="-30dp"
+        android:layout_alignRight="@id/tv_time" />
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_next"
+        android:src="@drawable/ic_next"
+        android:background="@android:color/transparent"
+        android:layout_alignRight="@id/tv_time"
+        android:layout_marginRight="-120dp"
+        android:layout_centerVertical="true"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_previous"
+        android:src="@drawable/ic_previous"
+        android:background="@android:color/transparent"
+        android:layout_alignLeft="@id/tv_time"
+        android:layout_marginLeft="-120dp"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>
+<ImageButton
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:id="@id/btn_play"
+    android:src="@drawable/ic_play_play"
+    android:background="@android:color/transparent"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="10dp"
+    android:elevation="4dp"
+    android:layout_alignBottom="@id/rl_seekbar"
+    android:layout_above="@id/sb_circular"/>
+<!--<android.support.design.widget.FloatingActionButton-->
+<!--android:id="@+id/fab_play"-->
+<!--android:layout_width="150dp"-->
+<!--android:layout_height="150dp"-->
+<!--app:fabSize="auto"-->
+<!--android:layout_alignParentRight="true"-->
+<!--android:layout_marginRight="25dp"-->
+<!--android:layout_marginBottom="-35dp"-->
+<!--android:layout_alignBottom="@id/ll_circular_bg"-->
+<!--android:src="@android:drawable/ic_media_play"-->
+<!--android:backgroundTint="#caf47c"/>-->
+<RelativeLayout
+    android:id="@+id/rl_playlist"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/tab_max_width"
+    android:background="#e7dc09"
+    android:layout_alignParentBottom="true">
+</RelativeLayout>
+</RelativeLayout>

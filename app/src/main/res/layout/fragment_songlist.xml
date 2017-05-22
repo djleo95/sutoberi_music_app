@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SongListFragment">
+
+    <!--<GridView-->
+        <!--android:padding="4dp"-->
+        <!--android:id="@+id/gv_main_songtab"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:numColumns="1"-->
+        <!--android:horizontalSpacing="2dp"-->
+        <!--android:verticalSpacing="2dp">-->
+    <!--</GridView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_SongsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
